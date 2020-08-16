@@ -1,0 +1,2 @@
+# dinoteknoloji
+dinoteknoloji.com
