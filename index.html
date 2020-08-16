@@ -1,0 +1,465 @@
+{% load siteconfigs_tags %}
+{% load thumbnail %}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>{% ayar_1 %} | {% ayar_2 %}</title>
+	<meta name="description" content="{% ayar_13 %}" />
+	<meta name="keywords" content="{% ayar_15 %}" />
+	<meta name="author" content="{% ayar_2 %}" />
+
+	<link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300i,400,500" rel="stylesheet">
+
+	<link rel="stylesheet" href="./static/front/vendor/themify-icons/themify-icons.css">
+	<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+	<link rel="stylesheet" href="./static/front/vendor/owl-carousel/owl.theme.default.min.css">
+	<link rel="stylesheet" href="./static/front/vendor/owl-carousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="./static/front/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="./static/front/css/style.css">
+
+	<link rel="apple-touch-icon" sizes="57x57" href="./static/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="./static/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="./static/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="./static/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="./static/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="./static/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="./static/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="./static/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="./static/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="./static/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./static/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="./static/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./static/favicon-16x16.png">
+	<link rel="manifest" href="./static/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="./static/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+	<!-- ================Offcanvus Menu Area =================-->
+	<div class="side_menu">
+			<ul class="list menu_right">
+				<li>
+					<a href="/">Ana Sayfa</a>
+				</li>
+				<li>
+					<a href="#">Hakkımızda</a>
+				</li>
+				<li>
+					<a href="#">Projelerimiz</a>
+				</li>
+				<li>
+					<a href="#">Servis</a>
+				</li>
+				<li>
+					<a href="https://blog.dinoteknoloji.com" target="_blank">Blog</a>
+				</li>
+				<li>
+					<a href="{% url 'iletisim' %}">İletişim</a>
+				</li>
+			</ul>
+	</div>
+	<!--================End Offcanvus Menu Area =================-->
+
+	<!--================Canvus Menu Area =================-->
+	<div class="canvus_menu">
+		<div class="container">
+			<div class="float-right">
+				<div class="toggle_icon" title="Menu Bar">
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--================End Canvus Menu Area =================-->
+  <header>
+    <div class="hero">
+      <a class="navbar-brand" href="/">
+        <img src="./static/front/img/logo.png" alt="">
+      </a>
+      
+      <div class="owl-carousel owl-theme heroCarousel">
+        <div class="item">
+          <div class="hero__slide">
+            <img src="./static/front/img/hero-2.png" alt="">
+            <div class="hero__slideContent text-center">
+              <h1>Dino Teknoloji</h1>
+              <p>Sipariş Otomasyonu ile Endüstri 4.0 a geçiş yapın.</p>
+							<a class="btn btn--leftBorder btn--rightBorder" href="#/">Detay</a>
+							<span class="hero__slideContent--right"></span>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="hero__slide">
+            <img src="./static/front/img/hero-1.png" alt="">
+            <div class="hero__slideContent text-center">
+              <h1>Dino Teknoloji</h1>
+              <p>Sipariş durumlarının anlık olarak izlenmesi. (hazırlanan, bekleyen ve yarım kalan siparişler)</p>
+							<a class="btn btn--leftBorder btn--rightBorder" href="#/">Detay</a>
+							<span class="hero__slideContent--right"></span>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="hero__slide">
+            <img src="./static/front/img/hero-3.png" alt="">
+            <div class="hero__slideContent text-center">
+              <h1>Dino Teknoloji</h1>
+              <p>Aynı anda tüm stok alanlarından çıkış sağlaması.</p>
+							<a class="btn btn--leftBorder btn--rightBorder" href="#/">Detay</a>
+							<span class="hero__slideContent--right"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+	<section class="about section-margin mb-5">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-md-5">
+					<div class="about__img text-center text-md-left mb-5 mb-md-0">
+						<img class="img-fluid" src="./static/front/img/about.png" alt="">
+						<a href="#/" class="about__img__date text-center">
+							<h3>40</h3>
+							<p>Yıllık <br> Tecrübe</p>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-7 pl-xl-5">
+					<div class="section-intro">
+						<h4 class="section-intro__title">Dino Teknoloji</h4>
+						<h2 class="section-intro__subtitle">Endüstriyel Teknolojiler</h2>
+					</div>
+					<p>Manisa Celal Bayar Üniversitesi Teknoloji Geliştirme Merkezinde bulunan Dino Teknoloji A.Ş. Endüstriyel Otomasyon, Yazılım, Elektronik ve Mekatronik konularında faaliyet göstermektedir.</p>
+					<p>Şirketimiz Endüstriyel Ar-Ge projeleri gerçekleştirerek, Robotik Çözümler ve Özel Makina İmalatı konularında uzmanlaşmıştır.</p>
+					<a class="btn btn--rightBorder mt-4" href="#/">Devamını Oku</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="overview">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-lg-4 col-xl-3 mb-4 mb-xl-0">
+					<div class="media align-items-center overview__single">
+						<span class="overview__single__icon"><i class="ti-crown"></i></span>
+						<div class="media-body">
+							<h3>89+</h3>
+							<p>Proje</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-lg-4 col-xl-3 mb-4 mb-xl-0">
+					<div class="media align-items-center overview__single">
+						<span class="overview__single__icon"><i class="ti-face-smile"></i></span>
+						<div class="media-body">
+							<h3>66+</h3>
+							<p>Mutlu Müşteri</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-lg-4 col-xl-3 mb-4 mb-xl-0">
+					<div class="media align-items-center overview__single">
+						<span class="overview__single__icon"><i class="ti-user"></i></span>
+						<div class="media-body">
+							<h3>45+</h3>
+							<p>Profesyonel</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-lg-4 col-xl-3 mb-4 mb-xl-0">
+					<div class="media align-items-center overview__single">
+						<span class="overview__single__icon"><i class="ti-gift"></i></span>
+						<div class="media-body">
+							<h3>2000+</h3>
+							<p>Bardak Kahve</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="portfolio section-margin">
+		<div class="container">
+			<div class="section-intro">
+				<h4 class="section-intro__title">PORTFÖYÜMÜZ</h4>
+				<h2 class="section-intro__subtitle bottom-border">Son Tamamlanan Projeler</h2>
+			</div>
+
+            {% for i in blog_list %}
+			<div class="row align-items-end pb-md-5 mb-4">
+				<div class="{{ i.class }}">
+					<div class="portfolio__img">
+						<img class="img-fluid" src="{{ i.img }}" alt="">
+					</div>
+				</div>
+				<div class="col-md-5 mb-5 pl-xl-5">
+					<h4 class="section-intro__title left-border">Mart, 2019</h4>
+					<h2 class="section-intro__subtitle small">{{ i.text|truncatechars:25 }}</h2>
+					<p>Sipariş Otomasyonu Ürün Yönetim Sistemi devreye alma tamamlandı. Personel eğitimleri verilerek Makina kullanıma alındı.</p>
+
+					<a class="btn btn--rightBorder mt-3" href="#/">Devamını Oku</a>
+				</div>
+			</div>
+            {% endfor %}
+
+			<div class="row align-items-end pb-md-5 mb-4">
+				<div class="col-md-5 mb-5 pr-xl-5 order-2 order-md-1">
+					<h4 class="section-intro__title left-border">Ocak, 2019</h4>
+					<h2 class="section-intro__subtitle small">Ürper Gıda</h2>
+					<p>PM-Entegre yazılım kurulumu yapılarak Bayi siparişlerinin otomatik olarak alınmasına başlandı.</p>
+
+					<a class="btn btn--rightBorder mt-3" href="#/">Devamını Oku</a>
+				</div>
+				<div class="col-md-7 mb-4 mb-md-0 order-1 order-md-2">
+					<div class="portfolio__img">
+						<img class="img-fluid" src="./static/front/img/portfolio3.png" alt="">
+					</div>
+				</div>
+			</div>
+
+			<div class="row align-items-end pb-md-5 mb-4">
+				<div class="col-md-7 mb-4 mb-md-0">
+					<div class="portfolio__img">
+						<img class="img-fluid" src="./static/front/img/portfolio2.png" alt="">
+					</div>
+				</div>
+
+				<div class="col-md-5 mb-5 pl-xl-5">
+					<h4 class="section-intro__title left-border">Aralık, 2018</h4>
+					<h2 class="section-intro__subtitle small">Dino Gıda</h2>
+					<p>PM-Entegre yazılım kurulumu yapılarak Bayi siparişlerinin otomatik olarak alınmasına başlandı.</p>
+
+					<a class="btn btn--rightBorder mt-3" href="#/">Devamını Oku</a>
+				</div>
+			</div>
+
+			<div class="row align-items-end pb-md-5 mb-4">
+				<div class="col-md-5 mb-5 pr-xl-5 order-2 order-md-1">
+					<h4 class="section-intro__title left-border">Kasım, 2018</h4>
+					<h2 class="section-intro__subtitle small">Dino Gıda</h2>
+					<p>Sipariş Otomasyonu Ürün Yönetim Sistemi devreye alma tamamlandı. Personel eğitimleri verilerek Makina kullanıma alındı.</p>
+
+					<a class="btn btn--rightBorder mt-3" href="#/">Devamını Oku</a>
+				</div>
+
+				<div class="col-md-7 order-1 order-md-2 mb-4 mb-md-0">
+					<div class="portfolio__img">
+						<img class="img-fluid" src="./static/front/img/portfolio4.png" alt="">
+					</div>
+				</div>
+			</div>
+
+			<div class="text-center pt-2">
+				<button class="btn btn--rightBorder btn--leftBorder">Diğer Projeler</button>
+			</div>
+		</div>
+	</section>
+	
+
+	<section class="tips tips-bg">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-7 mb-4 mb-lg-0">
+					<h2 class="section-intro__subtitle">Endüstriyel Projelerinizde beraber çalışalım.</h2>
+					<p>Robotik, Görüntü işleme, Mekatronik, Elektronik, Yazılım, Üretim, Sipariş ve Otomasyon projelerinizde beraber çalışalım. Dino Teknoloji ailesi olarak projelerinizde çalışmaktan memnuniyet duyarız.</p>
+				</div>
+				<div class="col-lg-5 text-center text-lg-right">
+					<a class="btn btn-dark btn--leftBorder btn--rightBorder" href="#/">İletişime Geç</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="testimonial section-margin">
+		<div class="container">
+			<div class="section-intro">
+				<h4 class="section-intro__title">Müşteri Memnuniyeti</h4>
+				<h2 class="section-intro__subtitle bottom-border">Bizim İçin Ne Dediler?</h2>
+			</div>
+
+			<div class="owl-carousel owl-theme testimonialCarousel">
+				<div class="item">
+					<div class="media testimonial__slide">
+						<img class="img-fluid mr-4" src="./static/front/img/testimonial.png" width="120" height="125" alt="">
+						<div class="media-body">
+							<blockquote>
+								"PM-Entegre yazılımı ile Bayilerimizden gelen siparişleri otomatik olarak alıyoruz."
+							</blockquote>
+							<h3>B.</h3>
+							<p>Planlama Uzmanı</p>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="media testimonial__slide">
+						<img class="img-fluid mr-4" src="./static/front/img/testimonial.png" width="120" height="125" alt="">
+						<div class="media-body">
+							<blockquote>
+								"PM-Entegre yazılımı ile Bayilerimizden gelen siparişleri otomatik olarak alıyoruz."
+							</blockquote>
+							<h3>O.</h3>
+							<p>Planlama Uzmanı</p>
+						</div>
+					</div>
+        </div>
+        <div class="item">
+					<div class="media testimonial__slide">
+						<img class="img-fluid mr-4" src="./static/front/img/testimonial.png" width="120" height="125" alt="">
+						<div class="media-body">
+							<blockquote>
+								"Bayilerimizden gelen siparişleri Sipariş Otomasyonu ile hızlı ve hatasız olarak hazırlıyoruz."
+							</blockquote>
+							<h3>U.</h3>
+							<p>Şef</p>
+						</div>
+					</div>
+        </div>
+        <div class="item">
+					<div class="media testimonial__slide">
+						<img class="img-fluid mr-4" src="./static/front/img/testimonial.png" width="120" height="125" alt="">
+						<div class="media-body">
+							<blockquote>
+								"Bayilerimizden gelen siparişleri Sipariş Otomasyonu ile hızlı ve hatasız olarak hazırlıyoruz."
+							</blockquote>
+							<h3>E.</h3>
+							<p>Şef</p>
+						</div>
+					</div>
+        </div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer footer-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4 col-lg-2 mb-4 mb-lg-0 text-left">
+					<h3 class="footer__title">Ürünlerimiz</h3>
+					<ul class="footer__link">
+						<li><a href="#/">Sipariş Robotu</a></li>
+					</ul>
+				</div>
+				<div class="col-sm-4 col-lg-2 mb-4 mb-lg-0 text-left">
+					<h3 class="footer__title">Linkler</h3>
+					<ul class="footer__link">
+						<li><a href="#/">Hakkımızda</a></li>
+						<li><a href="#/">Projelerimiz</a></li>
+						<li><a href="#/">Servis</a></li>
+						<li><a href="#/">Blog</a></li>
+					</ul>
+				</div>
+				<div class="col-sm-4 col-lg-2 mb-4 mb-lg-0 text-left">
+					<h3 class="footer__title">İletişim</h3>
+					<ul class="footer__link">
+						<li><a href="#/">İletişim</a></li>
+						<li><a href="#/">Arıza Bildirim</a></li>
+						<li><a href="#/">Teknik Servis Formu</a></li>
+					</ul>
+				</div>
+				<div class="col-sm-4 col-lg-2 mb-4 mb-lg-0 text-left">
+					<h3 class="footer__title">Kurumsal</h3>
+					<ul class="footer__link">
+						<li><a href="#/">Gizlilik Politikası</a></li>
+						<li><a href="#/">Kullanım Şartları</a></li>
+						<li><a href="#/">Satış Sözleşmesi</a></li>
+						<li><a href="#/">Kullanım Kılavuzu</a></li>
+					</ul>
+				</div>
+				<div class="col-sm-8 col-lg-4 mb-4 mb-lg-0 text-left">
+					<h3 class="footer__title">Takip Edin</h3>
+					<p>Projelerimiz ve yenilikler için takip ediniz</p>
+					<form action="" class="form-subscribe">
+						<div class="input-group">
+							<input type="email" class="form-control" placeholder="E-Posta adresiniz" required>
+							<div class="input-group-append">
+								<button class="btn-append" type="submit"><i class="lnr lnr-arrow-right"></i></button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="d-sm-flex justify-content-between footer__bottom top-border">
+				<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> {% ayar_16 %} | Tasarım <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://mesebilisim.com" target="_blank">Meşe Bilişim</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+				<ul class="social-icons mt-2 mt-sm-0">
+					<li><a href="{% ayar_3 %}"><i class="fab fa-facebook-f"></i></a></li>
+					<li><a href="{% ayar_4 %}"><i class="fab fa-twitter"></i></a></li>
+					<li><a href="{% ayar_19 %}"><i class="fab fa-youtube"></i></a></li>
+					<li><a href="{% ayar_18 %}"><i class="fab fa-linkedin"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+
+
+
+	<script src="./static/front/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="./static/front/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+	<script src="./static/front/vendor/owl-carousel/owl.carousel.min.js"></script>
+
+	<script>
+		var testimonialCarousel = $('.testimonialCarousel');
+      testimonialCarousel.owlCarousel({
+      loop:true,
+      margin:80,
+      startPosition: 2,
+      nav: false,
+      responsiveClass:true,
+      responsive:{
+        0:{
+            items:1
+        },
+        1000:{
+            items:2,
+            loop:true
+        }
+      }
+    });
+
+    var heroCarousel = $('.heroCarousel');
+      heroCarousel.owlCarousel({
+      loop:true,
+      margin:10,
+      nav: false,
+      startPosition: 1,
+      responsiveClass:true,
+      responsive:{
+        0:{
+            items:1
+        }
+      }
+	});
+
+	var dropToggle = $('.menu_right > li').has('ul').children('a');
+	dropToggle.on('click', function() {
+		dropToggle.not(this).closest('li').find('ul').slideUp(200);
+		$(this).closest('li').children('ul').slideToggle(200);
+		return false;
+	});
+
+	$( ".toggle_icon" ).on('click', function() {
+		$( 'body' ).toggleClass( "open" );
+	});
+
+	</script>
+</body>
+</html>
